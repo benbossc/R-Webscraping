@@ -158,4 +158,3 @@ Execute the function
 ```R
 scrape.raditation()
 ```
-
