@@ -51,12 +51,9 @@ weather.station <- read_html('http://micromet.paccar.wsu.edu/roof/')
 # Extract Values From Table
 Next we specify the html nodes that we are interested in. In this case these are all referred to with the label “font” which allows us to specify that we want all values from the page that are labeled “font”.
 ```R
-# Save the url as a variable
-weather.station <- read_html('http://micromet.paccar.wsu.edu/roof/')
-```
-
 # Extract the table values from the HTML
 table.values <- html_nodes(weather.station, xpath = '//font/text()')
+```
 
 # Visualize the table
 ```R
