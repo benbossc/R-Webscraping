@@ -246,3 +246,11 @@ head(pop2)
 ```
 
 Take a look at ```pop2```. Now we have a data frame that could be used for different kinds of analysis and visualization.
+
+## Q4-Q6
+Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process.
+
+Q5: Document and describe your strategies for Q4. What were some issues you rain across and how did you problem solve?
+
+Q6: 
+
