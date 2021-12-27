@@ -220,6 +220,11 @@ pop2$Rank <- as.numeric(pop2$Rank)
 
 The Population column is also a character because the numbers have commas in them, plus some observations include characters such as [1] to indicate some footnotes. We can use the ```parse_number``` function to remove commas and footnotes from the Population column.
 
+If not installed and/or loaded yet, we'll need both ```rvest``` and ```stringr``` packages for ```parse_number()``` and ```str_replace_all()``` functions.
+
+install.packages("rvest")
+library(rvest)
+
 ```R
 # remove commas and footnotes from population column
 pop2$Population <- parse_number(pop2$Population)
