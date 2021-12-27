@@ -4,7 +4,7 @@
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 # Acknowledgements
-This lab is sourced from the <a href="https://cougrstats.wordpress.com/2018/10/12/webscraping-in-r/"> CougRStat </a> lesson material.
+This lab is sourced from the <a href="https://cougrstats.wordpress.com/2018/10/12/webscraping-in-r/"> CougRStat </a> lesson material,  the <a href="https://remiller1450.github.io/s230s19/Intro_to_Web_Scraping.html"> "Introduction to Data Scraping with R" </a> lab materials developed by Dr. Ryan Miller, and Dr. Katherine Walden's <a href="https://remiller1450.github.io/s230s19/Intro_to_Web_Scraping.html"> "Data Scraping in R Using rvest" </a> lab.
 
 # Functions we'll be using
 These are the three functions that are used during thie assignment for webscraping. These are the only functions that are used from the “rvest” package. Everything else in this presentation is base R.
@@ -76,6 +76,13 @@ head(table.values, 13)
 ## [12]  Wind speed
 ## [13]    2.7 m/s (6 mph)
 ```
+
+# Q1
+Try creating a new dataframe named sidebarValues that containts extracted values from the side bar. HINT: What label do these fall under? Use your web browser's "inspect" function to find out... 
+
+# Indexed List
+What is an index list? An index list is a list of the items in a list based on their position.
+For example, in the list ```, Latest time, 2018-10-08 09:10:00, Net Radiation, ... ``` Latest time is in the second ([2]) index position, 2018-10-08 09:10:00 is [3], and so on. NOTE: In the R/RStudio scripting language, index position counting starts at one (1). This is different than other programming languages like Python where counting starts at zero (0).
 
 # Save the Values as Individual Variables
 We’re going to save the values that we want from the previous list as individual variables
@@ -158,3 +165,75 @@ Execute the function
 ```R
 scrape.raditation()
 ```
+
+# More Tabular Data
+Navigate to the https://en.wikipedia.org/wiki/List_of_countries_by_population_in_1900 URL in a web browser.
+
+## Q2 
+How does the "tabular" data different from the WSU source? 
+
+We'll now read web page into R using the ```read_html``` function from the rvest package. ```read_html``` uses HTML's markup language structure and tags to parse the web page into an R object.
+
+```R
+popParse <- read_html("https://en.wikipedia.org/wiki/List_of_countries_by_population_in_1900")
+str(popParse)
+```
+```read_html``` creates an R object with information about the web page, based on the HTML tags present in the web page. We now have a ```popParse``` object that includes nodes, or HTML elements from the web page.
+
+We can now work on transforming our ```popParse``` object into a table. This will involve multiple steps. First step is to see what tables are in the ```popParse``` object.
+```R
+popNodes <- html_nodes(popParse, "table")
+popNodes
+```
+
+## Q3
+Unlike in the WSU example, we are instead using the html_nodes function differently. How so?
+
+We can select one of those tables and extract it as a new object. We'll do this by selecting the fourth table using double brackets, which are used to index list object.
+```R
+# creates a new object pop with the content of the sixth table from popNodes
+pop <- html_table(popNodes, header = TRUE, fill = TRUE)[[6]] 
+str(pop)
+```
+
+# Cleaning the dataframe
+Now we can start to focus on cleaning the pop data frame. Notice that even though the first and third columns are numbers, they are classified as “character.” For Rank, that is because the first observation is the world population and it is not assigned a rank, but rather, the character “-”. We can remove the world population row.
+
+```R
+# creates new pop2 object with first row removed from pop object
+pop2 <- pop[-1, ]
+head(pop2)
+```
+
+We will need to reset the row numbers.
+```R
+# reset row numbers
+row.names(pop2) <- NULL
+```
+
+We're still stuck with Rank and Population columns that are not numbers. We need to convert these columns to be numeric.
+```R
+# force rank field to be a number
+# this output WILL include an error message--don't panic!
+pop2$Rank <- as.numeric(pop2$Rank)
+```
+
+The Population column is also a character because the numbers have commas in them, plus some observations include characters such as [1] to indicate some footnotes. We can use the ```parse_number``` function to remove commas and footnotes from the Population column.
+
+```R
+# remove commas and footnotes from population column
+pop2$Population <- parse_number(pop2$Population)
+```
+
+We can also rename the third column to Population.
+```R
+names(pop2)[3] <- "Population"
+```
+
+Almost there! We can use regular expressions to remove footnotes from the ```Country/Territory``` field.
+```R
+pop2$`Country/Territory` <- str_replace_all(pop2$`Country/Territory`, "\\[[^]]+\\]", "")
+head(pop2)
+```
+
+Take a look at ```pop2```. Now we have a data frame that could be used for different kinds of analysis and visualization.
