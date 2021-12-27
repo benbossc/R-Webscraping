@@ -77,7 +77,7 @@ head(table.values, 13)
 ## [13]    2.7 m/s (6 mph)
 ```
 
-# Q1
+## Q1
 Try creating a new dataframe named sidebarValues that containts extracted values from the side bar. HINT: What label do these fall under? Use your web browser's "inspect" function to find out... 
 
 # Indexed List
@@ -172,6 +172,8 @@ Navigate to the https://en.wikipedia.org/wiki/List_of_countries_by_population_in
 ## Q2 
 How does the "tabular" data different from the WSU source? 
 
+# More Tabular Data (cont.)
+
 We'll now read web page into R using the ```read_html``` function from the rvest package. ```read_html``` uses HTML's markup language structure and tags to parse the web page into an R object.
 
 ```R
@@ -188,6 +190,8 @@ popNodes
 
 ## Q3
 Unlike in the WSU example, we are instead using the html_nodes function differently. How so?
+
+# More Tabular Data (cont.)
 
 We can select one of those tables and extract it as a new object. We'll do this by selecting the fourth table using double brackets, which are used to index list object.
 ```R
