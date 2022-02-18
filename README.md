@@ -248,9 +248,6 @@ head(pop2)
 Take a look at ```pop2```. Now we have a data frame that could be used for different kinds of analysis and visualization.
 
 ## Q4-Q6
-Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process.
+Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R or OpenRefine for this step. For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. 
 
 Q5: Document and describe your strategies for Q4. What were some issues you rain across and how did you problem solve?
-
-Q6: 
-
