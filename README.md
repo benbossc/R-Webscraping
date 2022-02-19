@@ -27,6 +27,11 @@ HTML stands for HyperText Markup Language. All HTML pages are built using the sa
 # HTML Tree
 <img src = "figures/R-Webscraping-fig1.png">
 
+# Q1
+Finish the question from 2/23/22 lab if you haven't yet and make sure you save your dataframe! We'll be revisiting it in a later question.
+
+The original question: Import the data from IIHS'Fatal Crash Totals data table (https://www.iihs.org/topics/fatality-statistics/detail/state-by-state) and create a dataframe with at least 2 columns: 1) state; 2) number of deaths per 100,000 individuals
+
 # Information to Gather
 Let’s collect some environmental data. I want to know what the weather station on the roof is reporting right now.
 The url for the PACCAR Weather Station is http://micromet.paccar.wsu.edu/roof/
@@ -77,8 +82,8 @@ head(table.values, 13)
 ## [13]    2.7 m/s (6 mph)
 ```
 
-## Q1
-Try creating a new dataframe named sidebarValues that containts extracted values from the side bar. HINT: What label do these fall under? Use your web browser's "inspect" function to find out... 
+## Q2
+Try creating a new dataframe named sidebarValues that containts extracted values from the side bar. HINT: What label do these fall under? Use your web browser's "inspect" function (or tools like SelectorGadget) to find out... 
 
 # Indexed List
 What is an index list? An index list is a list of the items in a list based on their position.
@@ -169,8 +174,8 @@ scrape.raditation()
 # More Tabular Data
 Navigate to the https://en.wikipedia.org/wiki/List_of_countries_by_population_in_1900 URL in a web browser.
 
-## Q2 
-How does the "tabular" data different from the WSU source? 
+## Q3
+How does the "tabular" data here different from the WSU source? 
 
 # More Tabular Data (cont.)
 
@@ -187,9 +192,6 @@ We can now work on transforming our ```popParse``` object into a table. This wil
 popNodes <- html_nodes(popParse, "table")
 popNodes
 ```
-
-## Q3
-Unlike in the WSU example, we are instead using the html_nodes function differently. How so?
 
 # More Tabular Data (cont.)
 
@@ -247,7 +249,12 @@ head(pop2)
 
 Take a look at ```pop2```. Now we have a data frame that could be used for different kinds of analysis and visualization.
 
-## Q4-Q6
-Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R or OpenRefine for this step. For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. 
+# Q4
+Make sure pop2 object is visible in your .HTML file after knitting.
 
-Q5: Document and describe your strategies for Q4. What were some issues you rain across and how did you problem solve?
+## Q5-Q7
+Q5: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R or OpenRefine for this step. For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. 
+
+Q6: Document and describe your strategies for Q4. What were some issues you rain across and how did you problem solve?
+
+Q7: Describe what kinds of visualization or analysis you could do with the data you scrapped in Q5. 
