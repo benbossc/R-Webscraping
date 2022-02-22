@@ -82,9 +82,6 @@ head(table.values, 13)
 ## [13]    2.7 m/s (6 mph)
 ```
 
-## Q2
-Try creating a new dataframe named sidebarValues that containts extracted values from the side bar. HINT: What label do these fall under? Use your web browser's "inspect" function (or tools like SelectorGadget) to find out... 
-
 # Indexed List
 What is an index list? An index list is a list of the items in a list based on their position.
 For example, in the list ```, Latest time, 2018-10-08 09:10:00, Net Radiation, ... ``` Latest time is in the second ([2]) index position, 2018-10-08 09:10:00 is [3], and so on. NOTE: In the R/RStudio scripting language, index position counting starts at one (1). This is different than other programming languages like Python where counting starts at zero (0).
@@ -174,7 +171,7 @@ scrape.raditation()
 # More Tabular Data
 Navigate to the https://en.wikipedia.org/wiki/List_of_countries_by_population_in_1900 URL in a web browser.
 
-## Q3
+## Q2
 How does the "tabular" data here different from the WSU source? 
 
 # More Tabular Data (cont.)
@@ -249,14 +246,14 @@ head(pop2)
 
 Take a look at ```pop2```. Now we have a data frame that could be used for different kinds of analysis and visualization.
 
-# Q4
+# Q3
 Make sure pop2 object is visible in your .HTML file after knitting.
 
-## Q5-Q8
-Q5: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R and/or OpenRefine for this step (Note: If you use OpenRefine, please also submit a .txt file with the <a href="https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html">JSON script</a>). For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. Don't forgt about the <a href="https://selectorgadget.com/"> SelectorGadget tool</a>.
+## Q4-Q7
+Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R and/or OpenRefine for this step (Note: If you use OpenRefine, please also submit a .txt file with the <a href="https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html">JSON script</a>). For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. Don't forgt about the <a href="https://selectorgadget.com/"> SelectorGadget tool</a>.
 
-Q6: Document and describe your strategies for Q5. What were some issues you rain across and how did you problem solve?
+Q5: Document and describe your strategies for Q5. What were some issues you rain across and how did you problem solve?
 
-Q7: Describe what kinds of visualization or analysis you could do with the data you scrapped in Q5. 
+Q6: Describe what kinds of visualization or analysis you could do with the data you scrapped in Q5. 
 
-Q8: From the same <a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state">IIHS website</a> from Q1, import data related to seat belt usage. Join the dataframe you created in Q1 with seat belt use and make a scatter plot of percent seat belt use vs. number of fatalities per 100,000 persons. (Note: Consider joining by State)
+Q7: From the same <a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state">IIHS website</a> from Q1, import data related to seat belt usage. Join the dataframe you created in Q1 with seat belt use and make a scatter plot of percent seat belt use vs. number of fatalities per 100,000 persons. (Note: Consider joining by State)
