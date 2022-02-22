@@ -252,7 +252,7 @@ Take a look at ```pop2```. Now we have a data frame that could be used for diffe
 # Q4
 Make sure pop2 object is visible in your .HTML file after knitting.
 
-## Q5-Q7
+## Q5-Q8
 Q5: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R and/or OpenRefine for this step (Note: If you use OpenRefine, please also submit a .txt file with the <a href="https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html">JSON script</a>). For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. Don't forgt about the <a href="https://selectorgadget.com/"> SelectorGadget tool</a>.
 
 Q6: Document and describe your strategies for Q4. What were some issues you rain across and how did you problem solve?
