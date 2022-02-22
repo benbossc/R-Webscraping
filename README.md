@@ -4,7 +4,7 @@
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 # Acknowledgements
-This lab is sourced from the <a href="https://cougrstats.wordpress.com/2018/10/12/webscraping-in-r/"> CougRStat </a> lesson material,  the <a href="https://remiller1450.github.io/s230s19/Intro_to_Web_Scraping.html"> "Introduction to Data Scraping with R" </a> lab materials developed by Dr. Ryan Miller, and Dr. Katherine Walden's <a href="https://remiller1450.github.io/s230s19/Intro_to_Web_Scraping.html"> "Data Scraping in R Using rvest" </a> lab.
+This lab is sourced from and adapted from the <a href="https://cougrstats.wordpress.com/2018/10/12/webscraping-in-r/"> CougRStat </a> lesson material,  the <a href="https://remiller1450.github.io/s230s19/Intro_to_Web_Scraping.html"> "Introduction to Data Scraping with R" </a> lab materials developed by Dr. Ryan Miller, Dr. Katherine Walden's <a href="https://remiller1450.github.io/s230s19/Intro_to_Web_Scraping.html"> "Data Scraping in R Using rvest" </a> lab, as well Derek Sonderegger's <a href="https://bookdown.org/dereksonderegger/444/"> "Intro Data Science using R" </a> curriculum.
 
 # Functions we'll be using
 These are the three functions that are used during thie assignment for webscraping. These are the only functions that are used from the “rvest” package. Everything else in this presentation is base R.
