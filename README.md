@@ -250,10 +250,10 @@ Take a look at ```pop2```. Now we have a data frame that could be used for diffe
 Make sure pop2 object is visible in your .HTML file after knitting.
 
 ## Q4-Q7
-Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R and/or OpenRefine for this step (Note: If you use OpenRefine, please also submit a .txt file with the <a href="https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html">JSON script</a>). For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. Don't forgt about the <a href="https://selectorgadget.com/"> SelectorGadget tool</a>.
+Q4: Take a data table from a web page of your choosing and convert to an R data frame. Include comments that document steps you're taking in that process. Part of this process will most likely involve data cleaning procedures: you're welcome to use R and/or OpenRefine for this step (Note: If you use OpenRefine, please also submit a .txt file with the <a href="https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html">JSON script</a>). For those still getting a feel for rvest, you're free to explore a Wikipedia table. I encourage more advanced users of R, however, to consider other sites. Don't forget about the <a href="https://selectorgadget.com/"> SelectorGadget tool</a>.
 
 Q5: Document and describe your strategies for Q5. What were some issues you rain across and how did you problem solve?
 
 Q6: Describe what kinds of visualization or analysis you could do with the data you scrapped in Q5. 
 
-Q7: From the same <a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state">IIHS website</a> from Q1, import data related to seat belt usage. Join the dataframe you created in Q1 with seat belt use and make a scatter plot of percent seat belt use vs. number of fatalities per 100,000 persons. (Note: Consider joining by State)
+Q7: From the same <a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state">IIHS website</a> in Q1, import data related to seat belt usage. Join the dataframe you created in Q1 with seat belt use and make a scatter plot of percent seat belt use vs. number of fatalities per 100,000 persons. (Note: Consider joining by State)
