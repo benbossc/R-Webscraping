@@ -69,22 +69,22 @@ head(table.values, 13)
 ## {xml_nodeset (13)}
 ##  [1]  
 ##  [2]  Latest time
-##  [3]   2018-10-08 09:10:00 
+##  [3]   2022-02-05 07:18:00 
 ##  [4] Net Radiation
-##  [5]   106.7  Wm
+##  [5]   -49.06  Wm
 ##  [6] Temperature
-##  [7]    8  &amp;deg C ( 46.4 &amp;deg F )
+##  [7]    2.6  &amp;deg C ( 36.7 &amp;deg F )
 ##  [8] Humidity
-##  [9]    76.8 %
+##  [9]    79.7 %
 ## [10] Pressure
-## [11]    923.4 mbar
+## [11]    932.4 mbar
 ## [12]  Wind speed
-## [13]    2.7 m/s (6 mph)
+## [13]    5.8 m/s (13 mph)
 ```
 
 # Indexed List
 What is an index list? An index list is a list of the items in a list based on their position.
-For example, in the list ```, Latest time, 2018-10-08 09:10:00, Net Radiation, ... ``` Latest time is in the second ([2]) index position, 2018-10-08 09:10:00 is [3], and so on. NOTE: In the R/RStudio scripting language, index position counting starts at one (1). This is different than other programming languages like Python where counting starts at zero (0).
+For example, in the list ```, Latest time, 2022-02-05 07:18:00, Net Radiation, ... ``` Latest time is in the second ([2]) index position, 2022-02-05 07:18:00 is [3], and so on. NOTE: In the R/RStudio scripting language, index position counting starts at one (1). This is different than other programming languages like Python where counting starts at zero (0).
 
 # Save the Values as Individual Variables
 We’re going to save the values that we want from the previous list as individual variables
@@ -113,7 +113,7 @@ scraped.datetime
 ```
 
 ```{r}
-## [1] "  2018-10-08 09:10:00 "
+## [1] "  2022-02-05 07:18:00 "
 ```
 
 # Split the Datetime into Date and Time
@@ -126,7 +126,7 @@ datetime
 
 ```{r}
 ## [[1]]
-## [1] ""           ""           "2018-10-08" "09:10:00"
+## [1] ""           ""           "2022-02-05" "07:18:00"
 ```
 
 ```R
