@@ -144,7 +144,7 @@ scraped.time
 ```
 
 # Create a Function to Scrape Radiation
-This is our radiation scraping function
+This is our radiation scraping function. (Note: Want to learn more about creating functions? Check out: https://swcarpentry.github.io/r-novice-inflammation/02-func-R/)
 
 ```R
 scrape.raditation <- function(){
